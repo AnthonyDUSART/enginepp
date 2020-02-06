@@ -8,7 +8,8 @@ Model::Model(Model const& model) {
 	m_shader = model.getShader();
 }
 
-Model::Model(Mesh* mesh, vec3 position, float size, Rotation* rotation, Texture* texture, Shader* shader) {
+Model::Model(GLuint vaoId, Mesh* mesh, vec3 position, float size, Rotation* rotation, Texture* texture, Shader* shader) {
+	m_vaoId = vaoId;
 	m_mesh = mesh;
 	m_position = position;
 	m_size = size;
@@ -18,6 +19,7 @@ Model::Model(Mesh* mesh, vec3 position, float size, Rotation* rotation, Texture*
 }
 
 Model::~Model() {
+	glDeleteVertexArrays(1, &m_vaoId);
 	delete m_mesh;
 	m_mesh = NULL;
 	delete m_rotation;
@@ -26,6 +28,18 @@ Model::~Model() {
 	m_shader = NULL;
 	delete m_texture;
 	m_texture = NULL;
+}
+
+GLuint& Model::vaoId() {
+	return m_vaoId;
+}
+
+GLuint Model::getVaoId() const {
+	return m_vaoId;
+}
+
+void Model::setVaoId(GLuint vaoId) {
+	m_vaoId = vaoId;
 }
 
 Mesh* Model::getMesh() const {
