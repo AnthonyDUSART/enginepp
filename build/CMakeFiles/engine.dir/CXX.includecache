@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Shader.h
+GL/glew.h
+-
+string
+-
+
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/ShaderController.cpp
+ShaderController.h
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/ShaderController.h
+
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/ShaderController.h
+iostream
+-
+string
+-
+fstream
+-
+GL/glew.h
+-
+Shader.h
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Shader.h
+

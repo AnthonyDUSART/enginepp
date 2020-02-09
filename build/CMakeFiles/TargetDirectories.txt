@@ -1,0 +1,3 @@
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/build/CMakeFiles/rebuild_cache.dir
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/build/CMakeFiles/engine.dir
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/build/CMakeFiles/edit_cache.dir

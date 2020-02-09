@@ -1,0 +1,32 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "cmake",
+            "type": "shell",
+            "command": [
+                "cmake",
+                ".."
+            ],
+            "options": {
+                "cwd": "${workspaceRoot}/build"
+            },
+        },
+        {
+            "label": "make",
+            "type": "shell",
+            "command": "make",
+            "options": {
+                "cwd": "${workspaceRoot}/build"
+            },
+        },
+        {
+            "label": "build",
+            "type": "shell",
+            "dependsOn": ["cmake", "make"],
+            "dependsOrder": "sequence"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/machina/Documents/Visual Projects/Workspaces/test/src/Test.h
+string
+-
+
+/home/machina/Documents/Visual Projects/Workspaces/test/src/main.cpp
+iostream
+-
+Test.h
+/home/machina/Documents/Visual Projects/Workspaces/test/src/Test.h
+SDL2/SDL.h
+-
+glm/glm.hpp
+-
+

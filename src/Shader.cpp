@@ -1,0 +1,53 @@
+    #include "Shader.h"
+    
+    Shader::Shader(std::string vertexFile, std::string fragmentFile, GLuint programId, GLuint vertexId, GLuint fragmentId) {
+        m_vertexFile = vertexFile;
+        m_fragmentFile = fragmentFile;
+        m_programId = programId;
+        m_vertexId = vertexId;
+        m_fragmentId = fragmentId;
+    }
+
+    Shader::~Shader() {
+
+    }
+
+    std::string Shader::getVertexFile() const {
+        return m_vertexFile;
+    }
+
+    void Shader::setVertexFile(std::string vertexFile) {
+        m_vertexFile = vertexFile;
+    }
+
+    std::string Shader::getFragmentFile() const {
+        return m_fragmentFile;
+    }
+
+    void Shader::setFragmentFile(std::string fragmentFile) {
+        m_fragmentFile = fragmentFile;
+    }
+
+    GLuint Shader::getProgramId() const {
+        return m_programId;
+    }
+
+    void Shader::setProgramId(GLuint programId) {
+        m_programId = programId;
+    }
+
+    GLuint Shader::getVertexId() const {
+        return m_vertexId;
+    }
+
+    void Shader::setVertexId(GLuint vertexId) {
+        m_vertexId = vertexId;
+    }
+
+    GLuint Shader::getFragmentId() const {
+        return m_fragmentId;
+    }
+
+    void Shader::setFragmentId(GLuint fragmentId) {
+        m_fragmentId = fragmentId;
+    }
