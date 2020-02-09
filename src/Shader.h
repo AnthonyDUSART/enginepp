@@ -15,8 +15,10 @@ protected:
     std::map<int, std::string> m_attributes;
 
 public:
+    Shader(Shader const &shader);
     Shader(std::string vertexFile = "", std::string fragmentFile = "", GLuint programId = 0, GLuint vertexId = 0, GLuint fragmentId = 0, std::map<int, std::string> attributes = std::map<int, std::string>());
     ~Shader();
+    Shader& operator=(Shader const &shader);
     std::string getVertexFile() const;
     void setVertexFile(std::string vertexFile);
     std::string getFragmentFile() const;

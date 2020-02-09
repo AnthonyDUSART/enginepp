@@ -59,6 +59,13 @@ bool ShaderController::compile(GLuint &id, GLenum type, std::string const &file)
 
 bool ShaderController::load(Shader* shader) {
     GLuint programId, vertexId, fragmentId;
+    
+    if(glIsShader(shader->getVertexId()))
+        glDeleteShader(shader->getVertexId());
+    if(glIsShader(shader->getFragmentId()))
+        glDeleteShader(shader->getFragmentId());
+    if(glIsProgram(shader->getProgramId()))
+        glDeleteProgram(shader->getProgramId());
 
     if(!ShaderController::compile(vertexId, GL_VERTEX_SHADER, shader->getVertexFile()))
         return false;

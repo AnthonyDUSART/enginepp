@@ -1,5 +1,9 @@
     #include "Shader.h"
     
+    Shader::Shader(Shader const& shader) {
+        *this = shader;
+    }
+
     Shader::Shader(std::string vertexFile, std::string fragmentFile, GLuint programId, GLuint vertexId, GLuint fragmentId, std::map<int, std::string> attributes) {
         m_vertexFile = vertexFile;
         m_fragmentFile = fragmentFile;
@@ -10,7 +14,15 @@
     }
 
     Shader::~Shader() {
+        glDeleteShader(m_vertexId);
+        glDeleteShader(m_fragmentId);
+        glDeleteProgram(m_programId);
+    }
 
+    Shader& Shader::operator=(Shader const &shader) {
+        m_vertexFile = shader.getVertexFile();
+        m_fragmentFile = shader.getFragmentFile();
+        return *this;
     }
 
     std::string Shader::getVertexFile() const {
