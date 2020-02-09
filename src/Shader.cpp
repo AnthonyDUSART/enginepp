@@ -1,11 +1,12 @@
     #include "Shader.h"
     
-    Shader::Shader(std::string vertexFile, std::string fragmentFile, GLuint programId, GLuint vertexId, GLuint fragmentId) {
+    Shader::Shader(std::string vertexFile, std::string fragmentFile, GLuint programId, GLuint vertexId, GLuint fragmentId, std::map<int, std::string> attributes) {
         m_vertexFile = vertexFile;
         m_fragmentFile = fragmentFile;
         m_programId = programId;
         m_vertexId = vertexId;
         m_fragmentId = fragmentId;
+        m_attributes = attributes;
     }
 
     Shader::~Shader() {
@@ -50,4 +51,16 @@
 
     void Shader::setFragmentId(GLuint fragmentId) {
         m_fragmentId = fragmentId;
+    }
+
+    std::map<int, std::string> Shader::getAttributes() const {
+        return m_attributes;
+    }
+
+    void Shader::setAttributes(std::map<int, std::string> attributes) {
+        m_attributes = attributes;
+    }
+
+    void Shader::addAttribute(int id, std::string name) {
+        m_attributes.insert({id, name});
     }

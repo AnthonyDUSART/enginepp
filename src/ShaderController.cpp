@@ -70,13 +70,17 @@ bool ShaderController::load(Shader* shader) {
     glAttachShader(programId, vertexId);
     glAttachShader(programId, fragmentId);
 
-    glBindAttribLocation(programId, 0, "in_Vertex");
-    glBindAttribLocation(programId, 1, "in_Color");
-    glBindAttribLocation(programId, 2, "in_TexCoord0");
+
+    // glBindAttribLocation(programId, 0, "in_Vertex");
+    // glBindAttribLocation(programId, 1, "in_Color");
+    // glBindAttribLocation(programId, 2, "in_TexCoord0");
 
     
-    glLinkProgram(programId);
+    for(int i = 0; i < shader->getAttributes().size(); i++) {
+        glBindAttribLocation(programId, i, shader->getAttributes()[i].c_str());
+    }
 
+    
     glLinkProgram(programId);
 
     GLint linkShaderError = 0;
