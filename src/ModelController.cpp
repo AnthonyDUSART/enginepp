@@ -31,22 +31,26 @@ void ModelController::load(Model* model) {
 }
 
 void ModelController::render(Model* model, mat4& projection, mat4& modelview) {
-	//model->getShader()->charger();
 
 	// sauvegarde du modelview
 	mat4 modelviewSave = modelview;
+
+	Shader* shader = model->getShader();
 
 	// modification du modelview
 	modelview = translate(modelview, model->getPosition());
 	modelview = rotate(modelview, model->getRotation()->getAngle(), model->getRotation()->getAxis());
 
-	glUseProgram(model->getShader()->getProgramId());
+	glUseProgram(shader->getProgramId());
 
 	// Verouillage VAO
 	glBindVertexArray(model->getVaoId());
 
-		glUniformMatrix4fv(glGetUniformLocation(model->getShader()->getProgramId(), "projection"), 1, GL_FALSE, value_ptr(projection));
-		glUniformMatrix4fv(glGetUniformLocation(model->getShader()->getProgramId(), "modelview"), 1, GL_FALSE, value_ptr(modelview));
+		mat4 modelviewProjection = projection * modelview;
+
+		glUniformMatrix4fv(glGetUniformLocation(shader->getProgramId(), "modelviewProjection"), 1, GL_FALSE, value_ptr(modelviewProjection));
+		//glUniformMatrix4fv(glGetUniformLocation(model->getShader()->getProgramId(), "projection"), 1, GL_FALSE, value_ptr(projection));
+		//glUniformMatrix4fv(glGetUniformLocation(model->getShader()->getProgramId(), "modelview"), 1, GL_FALSE, value_ptr(modelview));
 
 		glBindTexture(GL_TEXTURE_2D, model->getTexture()->getId());
 		glDrawArrays(GL_TRIANGLES, 0, model->getMesh()->getVertices().size());

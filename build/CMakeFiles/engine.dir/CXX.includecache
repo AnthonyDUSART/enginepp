@@ -6,6 +6,100 @@
 
 #IncludeRegexTransform: 
 
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Mesh.h
+GL/glew.h
+-
+GL/gl.h
+-
+glm/glm.hpp
+-
+glm/gtx/transform.hpp
+-
+glm/gtc/type_ptr.hpp
+-
+vector
+-
+
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/MeshController.h
+SDL2/SDL.h
+-
+glm/glm.hpp
+-
+glm/gtx/transform.hpp
+-
+glm/gtc/type_ptr.hpp
+-
+string
+-
+fstream
+-
+sstream
+-
+iostream
+-
+Mesh.h
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Mesh.h
+
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Model.h
+GL/glew.h
+-
+GL/glew.h
+-
+glm/glm.hpp
+-
+glm/gtx/transform.hpp
+-
+glm/gtc/type_ptr.hpp
+-
+vector
+-
+Mesh.h
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Mesh.h
+Rotation.h
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Rotation.h
+Texture.h
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Texture.h
+Shader.h
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Shader.h
+
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/ModelController.cpp
+ModelController.h
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/ModelController.h
+
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/ModelController.h
+SDL2/SDL.h
+-
+glm/glm.hpp
+-
+glm/gtx/transform.hpp
+-
+glm/gtc/type_ptr.hpp
+-
+string
+-
+regex
+-
+iostream
+-
+sstream
+-
+fstream
+-
+Model.h
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Model.h
+MeshController.h
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/MeshController.h
+ShaderController.h
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/ShaderController.h
+
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Rotation.h
+glm/glm.hpp
+-
+glm/gtx/transform.hpp
+-
+glm/gtc/type_ptr.hpp
+-
+
 /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Shader.h
 GL/glew.h
 -
@@ -13,10 +107,6 @@ string
 -
 map
 -
-
-/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/ShaderController.cpp
-ShaderController.h
-/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/ShaderController.h
 
 /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/ShaderController.h
 iostream
@@ -29,4 +119,18 @@ GL/glew.h
 -
 Shader.h
 /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Shader.h
+
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Texture.h
+GL/glew.h
+-
+GL/gl.h
+-
+SDL2/SDL.h
+-
+SDL2/SDL_image.h
+-
+iostream
+-
+string
+-
 
