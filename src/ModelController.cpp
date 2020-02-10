@@ -48,7 +48,8 @@ void ModelController::render(Model* model, mat4& projection, mat4& modelview) {
 
 		mat4 modelviewProjection = projection * modelview;
 
-		glUniformMatrix4fv(glGetUniformLocation(shader->getProgramId(), "modelviewProjection"), 1, GL_FALSE, value_ptr(modelviewProjection));
+		ShaderController::loadMatrix4f(shader, "modelviewProjection", modelviewProjection);
+		//glUniformMatrix4fv(glGetUniformLocation(shader->getProgramId(), "modelviewProjection"), 1, GL_FALSE, value_ptr(modelviewProjection));
 		//glUniformMatrix4fv(glGetUniformLocation(model->getShader()->getProgramId(), "projection"), 1, GL_FALSE, value_ptr(projection));
 		//glUniformMatrix4fv(glGetUniformLocation(model->getShader()->getProgramId(), "modelview"), 1, GL_FALSE, value_ptr(modelview));
 

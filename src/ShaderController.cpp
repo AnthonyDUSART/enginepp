@@ -1,6 +1,7 @@
 #include "ShaderController.h"
 
 bool ShaderController::compile(GLuint &id, GLenum type, std::string const &file) {
+    std::cout << "File: " << file << std::endl;
     std::cout << "Shader compilation... ";
     if((id = glCreateShader(type)) != 0) {
 
@@ -116,4 +117,8 @@ bool ShaderController::load(Shader* shader) {
         return false;
     }
 
+}
+
+void ShaderController::loadMatrix4f(Shader* shader, std::string name, glm::mat4 matrix) {
+    glUniformMatrix4fv(glGetUniformLocation(shader->getProgramId(), name.c_str()), 1, GL_FALSE, glm::value_ptr(matrix));
 }
