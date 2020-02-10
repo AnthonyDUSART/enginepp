@@ -11,6 +11,8 @@ Window::Window(std::string title, int width, int height, SDL_Window* context, SD
 
 Window::~Window() {
 	delete m_events;
+	SDL_GL_DeleteContext(m_context);
+	SDL_DestroyWindow(m_context);
 }
 
 std::string Window::getTitle() const

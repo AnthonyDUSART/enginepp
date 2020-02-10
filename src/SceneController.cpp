@@ -3,13 +3,8 @@
 void SceneController::createScene(Scene* scene) {
 	Window* window = new Window("Learning OpenGL", 800, 600);
 	WindowController::createWindow(window);
-	Shader* shader = new Shader("Shader/couleur3D.vert", "Shader/couleur3D.frag");
-	ShaderController::load(shader);
-
-
 
 	scene->setWindow(window);
-	scene->setShader(shader);
 }
 
 void SceneController::destroyScene(Scene* scene) {

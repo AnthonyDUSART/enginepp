@@ -64,8 +64,7 @@ int WindowController::createWindow(Window* window) {
 }
 
 void WindowController::destroyWindow(Window* window) {
-	SDL_GL_DeleteContext(window->getGlContext());
-	SDL_DestroyWindow(window->getContext());
+	delete window;
 	SDL_Quit();
 }
 
