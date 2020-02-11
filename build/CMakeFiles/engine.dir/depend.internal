@@ -26,6 +26,7 @@ CMakeFiles/engine.dir/src/Main.cpp.o
  /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Shader.h
  /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/ShaderController.h
  /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Texture.h
+ /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/TextureController.h
  /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/TextureShader.h
  /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Window.h
  /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/WindowController.h
@@ -53,6 +54,7 @@ CMakeFiles/engine.dir/src/ModelController.cpp.o
  /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Shader.h
  /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/ShaderController.h
  /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Texture.h
+ /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/TextureController.h
 CMakeFiles/engine.dir/src/Renderer.cpp.o
  /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Renderer.cpp
  /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Renderer.h
@@ -79,6 +81,7 @@ CMakeFiles/engine.dir/src/SceneController.cpp.o
  /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Shader.h
  /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/ShaderController.h
  /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Texture.h
+ /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/TextureController.h
  /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/TextureShader.h
  /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Window.h
  /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/WindowController.h
@@ -92,6 +95,10 @@ CMakeFiles/engine.dir/src/ShaderController.cpp.o
 CMakeFiles/engine.dir/src/Texture.cpp.o
  /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Texture.cpp
  /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Texture.h
+CMakeFiles/engine.dir/src/TextureController.cpp.o
+ /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Texture.h
+ /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/TextureController.cpp
+ /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/TextureController.h
 CMakeFiles/engine.dir/src/TextureShader.cpp.o
  /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Shader.h
  /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/TextureShader.cpp

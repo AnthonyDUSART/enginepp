@@ -15,6 +15,7 @@
 #include "Model.h"
 #include "MeshController.h"
 #include "ShaderController.h"
+#include "TextureController.h"
 
 #define BUFFER_OFFSET(offset) ((char*)NULL + (offset))
 

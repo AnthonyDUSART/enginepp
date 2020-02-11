@@ -2,7 +2,7 @@
 
 void ModelController::load(Model* model) {
 	MeshController::load(model->getMesh());
-	model->getTexture()->load();
+	TextureController::load(model->getTexture());
 	ShaderController::load(model->getShader());
 	
 	// eviter la fuite de m�moire

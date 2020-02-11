@@ -19,6 +19,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Shader.cpp" "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/build/CMakeFiles/engine.dir/src/Shader.cpp.o"
   "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/ShaderController.cpp" "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/build/CMakeFiles/engine.dir/src/ShaderController.cpp.o"
   "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Texture.cpp" "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/build/CMakeFiles/engine.dir/src/Texture.cpp.o"
+  "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/TextureController.cpp" "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/build/CMakeFiles/engine.dir/src/TextureController.cpp.o"
   "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/TextureShader.cpp" "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/build/CMakeFiles/engine.dir/src/TextureShader.cpp.o"
   "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Window.cpp" "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/build/CMakeFiles/engine.dir/src/Window.cpp.o"
   "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/WindowController.cpp" "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/build/CMakeFiles/engine.dir/src/WindowController.cpp.o"

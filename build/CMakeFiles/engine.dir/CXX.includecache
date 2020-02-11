@@ -101,6 +101,8 @@ MeshController.h
 /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/MeshController.h
 ShaderController.h
 /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/ShaderController.h
+TextureController.h
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/TextureController.h
 
 /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Rotation.h
 glm/glm.hpp
@@ -139,6 +141,8 @@ Input.h
 /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Input.h
 Texture.h
 /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Texture.h
+TextureController.h
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/TextureController.h
 TextureShader.h
 /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/TextureShader.h
 Camera.h
@@ -187,6 +191,16 @@ iostream
 -
 string
 -
+
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/TextureController.h
+GL/glew.h
+-
+SDL2/SDL.h
+-
+SDL2/SDL_image.h
+-
+Texture.h
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Texture.h
 
 /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/TextureShader.h
 Shader.h

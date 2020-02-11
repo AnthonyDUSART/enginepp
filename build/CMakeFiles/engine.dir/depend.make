@@ -25,6 +25,7 @@ CMakeFiles/engine.dir/src/Main.cpp.o: ../src/SceneController.h
 CMakeFiles/engine.dir/src/Main.cpp.o: ../src/Shader.h
 CMakeFiles/engine.dir/src/Main.cpp.o: ../src/ShaderController.h
 CMakeFiles/engine.dir/src/Main.cpp.o: ../src/Texture.h
+CMakeFiles/engine.dir/src/Main.cpp.o: ../src/TextureController.h
 CMakeFiles/engine.dir/src/Main.cpp.o: ../src/TextureShader.h
 CMakeFiles/engine.dir/src/Main.cpp.o: ../src/Window.h
 CMakeFiles/engine.dir/src/Main.cpp.o: ../src/WindowController.h
@@ -52,6 +53,7 @@ CMakeFiles/engine.dir/src/ModelController.cpp.o: ../src/Rotation.h
 CMakeFiles/engine.dir/src/ModelController.cpp.o: ../src/Shader.h
 CMakeFiles/engine.dir/src/ModelController.cpp.o: ../src/ShaderController.h
 CMakeFiles/engine.dir/src/ModelController.cpp.o: ../src/Texture.h
+CMakeFiles/engine.dir/src/ModelController.cpp.o: ../src/TextureController.h
 
 CMakeFiles/engine.dir/src/Renderer.cpp.o: ../src/Renderer.cpp
 CMakeFiles/engine.dir/src/Renderer.cpp.o: ../src/Renderer.h
@@ -78,6 +80,7 @@ CMakeFiles/engine.dir/src/SceneController.cpp.o: ../src/SceneController.h
 CMakeFiles/engine.dir/src/SceneController.cpp.o: ../src/Shader.h
 CMakeFiles/engine.dir/src/SceneController.cpp.o: ../src/ShaderController.h
 CMakeFiles/engine.dir/src/SceneController.cpp.o: ../src/Texture.h
+CMakeFiles/engine.dir/src/SceneController.cpp.o: ../src/TextureController.h
 CMakeFiles/engine.dir/src/SceneController.cpp.o: ../src/TextureShader.h
 CMakeFiles/engine.dir/src/SceneController.cpp.o: ../src/Window.h
 CMakeFiles/engine.dir/src/SceneController.cpp.o: ../src/WindowController.h
@@ -91,6 +94,10 @@ CMakeFiles/engine.dir/src/ShaderController.cpp.o: ../src/ShaderController.h
 
 CMakeFiles/engine.dir/src/Texture.cpp.o: ../src/Texture.cpp
 CMakeFiles/engine.dir/src/Texture.cpp.o: ../src/Texture.h
+
+CMakeFiles/engine.dir/src/TextureController.cpp.o: ../src/Texture.h
+CMakeFiles/engine.dir/src/TextureController.cpp.o: ../src/TextureController.cpp
+CMakeFiles/engine.dir/src/TextureController.cpp.o: ../src/TextureController.h
 
 CMakeFiles/engine.dir/src/TextureShader.cpp.o: ../src/Shader.h
 CMakeFiles/engine.dir/src/TextureShader.cpp.o: ../src/TextureShader.cpp

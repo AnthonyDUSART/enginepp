@@ -14,6 +14,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/engine.dir/src/Shader.cpp.o"
   "CMakeFiles/engine.dir/src/ShaderController.cpp.o"
   "CMakeFiles/engine.dir/src/Texture.cpp.o"
+  "CMakeFiles/engine.dir/src/TextureController.cpp.o"
   "CMakeFiles/engine.dir/src/TextureShader.cpp.o"
   "CMakeFiles/engine.dir/src/Window.cpp.o"
   "CMakeFiles/engine.dir/src/WindowController.cpp.o"

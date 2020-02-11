@@ -11,6 +11,7 @@
 #include "Scene.h"
 #include "Input.h"
 #include "Texture.h"
+#include "TextureController.h"
 #include "TextureShader.h"
 #include "Camera.h"
 #include "MeshController.h"

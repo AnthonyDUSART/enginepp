@@ -36,7 +36,10 @@ void SceneController::loopScene(Scene* scene) {
 	Camera camera = Camera(glm::vec3(0, -40, 0));
 	
 	Model model = Model();
-	Texture* texture = new Texture("Texture/photorealistic/photorealistic_bricks/brick001.jpg");
+
+	Texture* texture = new Texture("Texture/photorealistic/photorealistic_bricks/brick004.jpg");
+	//TextureController::load(texture);
+
 	TextureShader* shader = new TextureShader();
 
 	model.setTexture(texture);

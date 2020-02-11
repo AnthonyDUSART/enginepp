@@ -19,17 +19,31 @@ class Texture
 public:
 	Texture(Texture const& texture);
 	Texture(std::string file = "");
+	Texture(int height, int width, GLenum format, GLenum internalFormat, bool isEmpty, std::string file = "", GLuint id = 0);
 	~Texture();
-	bool load();
-	SDL_Surface* reversePixels(SDL_Surface* imgSDL) const;
 	Texture& operator=(Texture const& texture);
+	GLuint& id();
 	GLuint getId() const;
 	void setId(GLuint id);
 	std::string getFile() const;
 	void setFile(std::string file);
+	int getHeight() const;
+	void setHeight(int height);
+	int getWidth() const;
+	void setWidth(int width);
+	GLenum getFormat() const;
+	void setFormat(GLenum format);
+	GLenum getInternalFormat() const;
+	void setInternalFormat(GLenum internalFormat);
+	bool isEmpty() const;
 
 private:
 	GLuint m_id;
 	std::string m_file;
+	int m_height;
+	int m_width;
+	GLenum m_format;
+	GLenum m_internalFormat;
+	bool m_isEmpty;
 };
 

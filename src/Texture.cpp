@@ -1,101 +1,41 @@
 #include "Texture.h"
 
 Texture::Texture(Texture const& texture) {
-	m_file = texture.getFile();
-	load();
+	*this = texture;
 }
 
 Texture::Texture(std::string file) {
 	m_id = 0;
 	m_file = file;
-;}
+}
+
+Texture::Texture(int height, int width, GLenum format, GLenum internalFormat, bool isEmpty, std::string file, GLuint id) {
+	m_height = height;
+	m_width = width;
+	m_format = format;
+	m_internalFormat = internalFormat;
+	m_isEmpty = isEmpty;
+	m_id = id;
+	m_file = file;
+}
 
 Texture::~Texture() {
 	glDeleteTextures(0, &m_id);
 }
 
-bool Texture::load() {
-	SDL_Surface* imgSource = IMG_Load(m_file.c_str());
-
-	if (imgSource == 0) {
-		std::cout << "Le chargement de l'image: \"" << m_file << "\" a échoué. Erreur: " << SDL_GetError() << std::endl;
-		return false;
-	}
-
-	SDL_Surface* img = reversePixels(imgSource);
-	SDL_FreeSurface(imgSource);
-
-	if (glIsTexture(m_id) == GL_TRUE)
-		glDeleteTextures(1, &m_id);
-
-	glGenTextures(1, &m_id);
-
-	// verrouillage
-	glBindTexture(GL_TEXTURE_2D, m_id);
-	
-	GLenum internalFormat = 0;
-	GLenum format = 0;
-	if (img->format->BytesPerPixel == 3) {
-		internalFormat = GL_RGB;
-
-		if (img->format->Rmask == 0xFF)
-			format = GL_RGB;
-		else
-			format = GL_BGR;
-	}
-	else if (img->format->BytesPerPixel == 4) {
-		internalFormat = GL_RGBA;
-		if (img->format->Rmask == 0xFF)
-			format = GL_RGBA;
-		else
-			format = GL_BGRA;
-	}
-	else {
-		std::cout << "Erreur, format d'image non reconnu" << std::endl;
-		SDL_FreeSurface(img);
-		return false;
-	}
-
-	glTexImage2D(GL_TEXTURE_2D, 0, internalFormat, img->w, img->h, 0, format, GL_UNSIGNED_BYTE, img->pixels);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-
-	// deverrouillage
-	glBindTexture(GL_TEXTURE_2D, 0);
-	SDL_FreeSurface(img);
-	return true;
-}
-
-SDL_Surface* Texture::reversePixels(SDL_Surface* imgSDL) const {
-
-
-	SDL_Surface* imgCopy = SDL_CreateRGBSurface(
-		0, 
-		imgSDL->w, 
-		imgSDL->h,
-		imgSDL->format->BitsPerPixel,
-		imgSDL->format->Rmask,
-		imgSDL->format->Gmask,
-		imgSDL->format->Bmask,
-		imgSDL->format->Amask
-	);
-
-	unsigned char* imgPixels = (unsigned char*)imgSDL->pixels;
-	unsigned char* imgCopyPixels = (unsigned char*)imgCopy->pixels;
-
-	for (int i = 0; i < imgSDL->h; i++)
-	{
-		for (int j = 0; j < imgSDL->w * imgSDL->format->BytesPerPixel; j++)
-			imgCopyPixels[(imgSDL->w * imgSDL->format->BytesPerPixel * (imgSDL->h - 1 - i)) + j] = imgPixels[(imgSDL->w * imgSDL->format->BytesPerPixel * i) + j];
-	}
-
-	return imgCopy;
-}
-
 Texture& Texture::operator=(Texture const& texture) {
 	m_file = texture.getFile();
-	load();
+	m_height = texture.getHeight();
+	m_width = texture.getWidth();
+	m_format = texture.getFormat();
+	m_internalFormat = texture.getInternalFormat();
+	m_isEmpty = texture.isEmpty();
+
 	return *this;
+}
+
+GLuint& Texture::id() {
+	return m_id;
 }
 
 GLuint Texture::getId() const {
@@ -112,4 +52,40 @@ std::string Texture::getFile() const {
 
 void Texture::setFile(std::string file) {
 	m_file = file;
+}
+
+int Texture::getHeight() const {
+	return m_height;
+}
+
+void Texture::setHeight(int height) {
+	m_height = height;
+}
+
+int Texture::getWidth() const {
+	return m_width;
+}
+
+void Texture::setWidth(int width) {
+	m_width = width;
+}
+
+GLenum Texture::getFormat() const {
+	return m_format;
+}
+
+void Texture::setFormat(GLenum format) {
+	m_format = format;
+}
+
+GLenum Texture::getInternalFormat() const {
+	return m_internalFormat;
+}
+
+void Texture::setInternalFormat(GLenum internalFormat) {
+	m_internalFormat = internalFormat;
+}
+
+bool Texture::isEmpty() const {
+	return m_isEmpty;
 }

@@ -252,9 +252,22 @@ CMakeFiles/engine.dir/src/Texture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/src/Texture.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Texture.cpp" -o CMakeFiles/engine.dir/src/Texture.cpp.s
 
+CMakeFiles/engine.dir/src/TextureController.cpp.o: CMakeFiles/engine.dir/flags.make
+CMakeFiles/engine.dir/src/TextureController.cpp.o: ../src/TextureController.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/machina/Documents/Visual Projects/Workspaces/openglcpp/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/engine.dir/src/TextureController.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/src/TextureController.cpp.o -c "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/TextureController.cpp"
+
+CMakeFiles/engine.dir/src/TextureController.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/src/TextureController.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/TextureController.cpp" > CMakeFiles/engine.dir/src/TextureController.cpp.i
+
+CMakeFiles/engine.dir/src/TextureController.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/src/TextureController.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/TextureController.cpp" -o CMakeFiles/engine.dir/src/TextureController.cpp.s
+
 CMakeFiles/engine.dir/src/TextureShader.cpp.o: CMakeFiles/engine.dir/flags.make
 CMakeFiles/engine.dir/src/TextureShader.cpp.o: ../src/TextureShader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/machina/Documents/Visual Projects/Workspaces/openglcpp/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/engine.dir/src/TextureShader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/machina/Documents/Visual Projects/Workspaces/openglcpp/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/engine.dir/src/TextureShader.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/src/TextureShader.cpp.o -c "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/TextureShader.cpp"
 
 CMakeFiles/engine.dir/src/TextureShader.cpp.i: cmake_force
@@ -267,7 +280,7 @@ CMakeFiles/engine.dir/src/TextureShader.cpp.s: cmake_force
 
 CMakeFiles/engine.dir/src/Window.cpp.o: CMakeFiles/engine.dir/flags.make
 CMakeFiles/engine.dir/src/Window.cpp.o: ../src/Window.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/machina/Documents/Visual Projects/Workspaces/openglcpp/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/engine.dir/src/Window.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/machina/Documents/Visual Projects/Workspaces/openglcpp/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/engine.dir/src/Window.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/src/Window.cpp.o -c "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Window.cpp"
 
 CMakeFiles/engine.dir/src/Window.cpp.i: cmake_force
@@ -280,7 +293,7 @@ CMakeFiles/engine.dir/src/Window.cpp.s: cmake_force
 
 CMakeFiles/engine.dir/src/WindowController.cpp.o: CMakeFiles/engine.dir/flags.make
 CMakeFiles/engine.dir/src/WindowController.cpp.o: ../src/WindowController.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/machina/Documents/Visual Projects/Workspaces/openglcpp/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/engine.dir/src/WindowController.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/machina/Documents/Visual Projects/Workspaces/openglcpp/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/engine.dir/src/WindowController.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/src/WindowController.cpp.o -c "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/WindowController.cpp"
 
 CMakeFiles/engine.dir/src/WindowController.cpp.i: cmake_force
@@ -308,6 +321,7 @@ engine_OBJECTS = \
 "CMakeFiles/engine.dir/src/Shader.cpp.o" \
 "CMakeFiles/engine.dir/src/ShaderController.cpp.o" \
 "CMakeFiles/engine.dir/src/Texture.cpp.o" \
+"CMakeFiles/engine.dir/src/TextureController.cpp.o" \
 "CMakeFiles/engine.dir/src/TextureShader.cpp.o" \
 "CMakeFiles/engine.dir/src/Window.cpp.o" \
 "CMakeFiles/engine.dir/src/WindowController.cpp.o"
@@ -330,6 +344,7 @@ engine: CMakeFiles/engine.dir/src/SceneController.cpp.o
 engine: CMakeFiles/engine.dir/src/Shader.cpp.o
 engine: CMakeFiles/engine.dir/src/ShaderController.cpp.o
 engine: CMakeFiles/engine.dir/src/Texture.cpp.o
+engine: CMakeFiles/engine.dir/src/TextureController.cpp.o
 engine: CMakeFiles/engine.dir/src/TextureShader.cpp.o
 engine: CMakeFiles/engine.dir/src/Window.cpp.o
 engine: CMakeFiles/engine.dir/src/WindowController.cpp.o
@@ -341,7 +356,7 @@ engine: /usr/lib/x86_64-linux-gnu/libGLEW.so
 engine: /usr/lib/x86_64-linux-gnu/libGL.so
 engine: /usr/lib/x86_64-linux-gnu/libGLU.so
 engine: CMakeFiles/engine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/machina/Documents/Visual Projects/Workspaces/openglcpp/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/machina/Documents/Visual Projects/Workspaces/openglcpp/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable engine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/engine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
