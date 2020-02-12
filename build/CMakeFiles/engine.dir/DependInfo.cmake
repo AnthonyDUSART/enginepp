@@ -6,6 +6,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Camera.cpp" "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/build/CMakeFiles/engine.dir/src/Camera.cpp.o"
   "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/ColorShader.cpp" "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/build/CMakeFiles/engine.dir/src/ColorShader.cpp.o"
+  "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/FrameBuffer.cpp" "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/build/CMakeFiles/engine.dir/src/FrameBuffer.cpp.o"
+  "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/FrameBufferController.cpp" "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/build/CMakeFiles/engine.dir/src/FrameBufferController.cpp.o"
   "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Input.cpp" "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/build/CMakeFiles/engine.dir/src/Input.cpp.o"
   "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Main.cpp" "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/build/CMakeFiles/engine.dir/src/Main.cpp.o"
   "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Mesh.cpp" "/home/machina/Documents/Visual Projects/Workspaces/openglcpp/build/CMakeFiles/engine.dir/src/Mesh.cpp.o"

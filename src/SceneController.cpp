@@ -14,16 +14,30 @@ void SceneController::destroyScene(Scene* scene) {
 void SceneController::loopScene(Scene* scene) {
 	bool run = true;
 
+	FrameBuffer frameBuffer = FrameBuffer(256.0, 256.0);
+	FrameBufferController::load(&frameBuffer);
+
+
+
 	// matrice de projection
-	mat4 projection;
-	mat4 modelview;
+	mat4 projection, projectionFBO;
+	mat4 modelview, modelviewFBO;
+
 	projection = perspective(
 		70.0,
 		(double)scene->getWindow()->getWidth() / scene->getWindow()->getHeight(),
 		1.0,
 		1000.0
 	);
+
+	projectionFBO = perspective(
+		70.0,
+		(double)frameBuffer.getWidth() / frameBuffer.getHeight(),
+		1.0,
+		100.0
+	);
 	modelview = mat4(1.0);
+	modelviewFBO = mat4(1.0);
 
 
 	unsigned int framerate = 1000 / 60;
@@ -47,6 +61,17 @@ void SceneController::loopScene(Scene* scene) {
 
 	MeshController::loadObj(model.getMesh(), "Model/teapot.obj");
 	ModelController::load(&model);
+
+	Model brickCube = Model();
+	Texture brickTexture = Texture("Texture/photorealistic/photorealistic_bricks/brick002.jpg");
+	TextureShader shaderBrick = TextureShader();
+
+	brickCube.setTexture(&brickTexture);
+	brickCube.setShader(&shaderBrick);
+
+	MeshController::loadObj(brickCube.getMesh(), "Model/cube.obj");
+	ModelController::load(&brickCube);
+
 	
 	//model.setMesh(mesh);
 	
@@ -75,9 +100,25 @@ void SceneController::loopScene(Scene* scene) {
 		}
 
 
+		
+
+		glBindFramebuffer(GL_FRAMEBUFFER, frameBuffer.getId());
+			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+			glViewport(0, 0, frameBuffer.getWidth(), frameBuffer.getHeight());
+			modelviewFBO = lookAt(vec3(3, 0, 3), vec3(0, 0, 0), vec3(0, 1, 0));
+
+			brickCube.getRotation()->setAxis(glm::vec3(1.0, 0.0, 0.0));
+			brickCube.getRotation()->setAngle(angle);
+
+			ModelController::render(&brickCube, projectionFBO, modelviewFBO);
+		glBindFramebuffer(GL_FRAMEBUFFER, 0);
+
+		WindowController::updateWindow(scene->getWindow());
+
 		// nettoyage de l'ecran
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
+		glViewport(0, 0, scene->getWindow()->getWidth(), scene->getWindow()->getHeight());
+		
 		// Camera
 		//modelview = lookAt(vec3(2, 2, 8), vec3(0, 0, 0), vec3(0, 1, 0));
 		camera.lookAt(modelview);
@@ -89,12 +130,7 @@ void SceneController::loopScene(Scene* scene) {
 		model.getRotation()->setAxis(glm::vec3(0.0, 1.0, 0.0));
 		model.getRotation()->setAngle(angle);
 
-		//cube.getRotation()->setAngle(angle);
-		//cube.show(projection, modelview);
 		ModelController::render(&model, projection, modelview);
-		
-
-		WindowController::updateWindow(scene->getWindow());
 
 		endTime = SDL_GetTicks();
 		countTime = endTime - beginTime;

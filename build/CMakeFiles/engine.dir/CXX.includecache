@@ -16,6 +16,24 @@ glm/gtc/type_ptr.hpp
 Input.h
 /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Input.h
 
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/FrameBuffer.h
+GL/glew.h
+-
+vector
+-
+Texture.h
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Texture.h
+
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/FrameBufferController.h
+GL/glew.h
+-
+FrameBuffer.h
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/FrameBuffer.h
+Texture.h
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Texture.h
+TextureController.h
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/TextureController.h
+
 /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Input.h
 SDL2/SDL.h
 -
@@ -151,6 +169,8 @@ MeshController.h
 /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/MeshController.h
 ModelController.h
 /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/ModelController.h
+FrameBufferController.h
+/home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/FrameBufferController.h
 
 /home/machina/Documents/Visual Projects/Workspaces/openglcpp/src/Shader.h
 GL/glew.h

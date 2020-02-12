@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/engine.dir/src/Camera.cpp.o"
   "CMakeFiles/engine.dir/src/ColorShader.cpp.o"
+  "CMakeFiles/engine.dir/src/FrameBuffer.cpp.o"
+  "CMakeFiles/engine.dir/src/FrameBufferController.cpp.o"
   "CMakeFiles/engine.dir/src/Input.cpp.o"
   "CMakeFiles/engine.dir/src/Main.cpp.o"
   "CMakeFiles/engine.dir/src/Mesh.cpp.o"

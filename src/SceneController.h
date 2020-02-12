@@ -16,6 +16,7 @@
 #include "Camera.h"
 #include "MeshController.h"
 #include "ModelController.h"
+#include "FrameBufferController.h"
 
 
 using namespace glm;

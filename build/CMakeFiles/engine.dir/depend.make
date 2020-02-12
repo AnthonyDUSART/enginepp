@@ -9,10 +9,22 @@ CMakeFiles/engine.dir/src/ColorShader.cpp.o: ../src/ColorShader.cpp
 CMakeFiles/engine.dir/src/ColorShader.cpp.o: ../src/ColorShader.h
 CMakeFiles/engine.dir/src/ColorShader.cpp.o: ../src/Shader.h
 
+CMakeFiles/engine.dir/src/FrameBuffer.cpp.o: ../src/FrameBuffer.cpp
+CMakeFiles/engine.dir/src/FrameBuffer.cpp.o: ../src/FrameBuffer.h
+CMakeFiles/engine.dir/src/FrameBuffer.cpp.o: ../src/Texture.h
+
+CMakeFiles/engine.dir/src/FrameBufferController.cpp.o: ../src/FrameBuffer.h
+CMakeFiles/engine.dir/src/FrameBufferController.cpp.o: ../src/FrameBufferController.cpp
+CMakeFiles/engine.dir/src/FrameBufferController.cpp.o: ../src/FrameBufferController.h
+CMakeFiles/engine.dir/src/FrameBufferController.cpp.o: ../src/Texture.h
+CMakeFiles/engine.dir/src/FrameBufferController.cpp.o: ../src/TextureController.h
+
 CMakeFiles/engine.dir/src/Input.cpp.o: ../src/Input.cpp
 CMakeFiles/engine.dir/src/Input.cpp.o: ../src/Input.h
 
 CMakeFiles/engine.dir/src/Main.cpp.o: ../src/Camera.h
+CMakeFiles/engine.dir/src/Main.cpp.o: ../src/FrameBuffer.h
+CMakeFiles/engine.dir/src/Main.cpp.o: ../src/FrameBufferController.h
 CMakeFiles/engine.dir/src/Main.cpp.o: ../src/Input.h
 CMakeFiles/engine.dir/src/Main.cpp.o: ../src/Main.cpp
 CMakeFiles/engine.dir/src/Main.cpp.o: ../src/Mesh.h
@@ -68,6 +80,8 @@ CMakeFiles/engine.dir/src/Scene.cpp.o: ../src/Shader.h
 CMakeFiles/engine.dir/src/Scene.cpp.o: ../src/Window.h
 
 CMakeFiles/engine.dir/src/SceneController.cpp.o: ../src/Camera.h
+CMakeFiles/engine.dir/src/SceneController.cpp.o: ../src/FrameBuffer.h
+CMakeFiles/engine.dir/src/SceneController.cpp.o: ../src/FrameBufferController.h
 CMakeFiles/engine.dir/src/SceneController.cpp.o: ../src/Input.h
 CMakeFiles/engine.dir/src/SceneController.cpp.o: ../src/Mesh.h
 CMakeFiles/engine.dir/src/SceneController.cpp.o: ../src/MeshController.h
