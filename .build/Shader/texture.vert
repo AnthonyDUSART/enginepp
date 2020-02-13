@@ -7,7 +7,7 @@
 
 in vec3 in_Vertex;
 in vec2 in_TexCoord0;
-
+//in float in_Size;
 
 // Uniform
 

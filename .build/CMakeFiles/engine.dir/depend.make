@@ -16,6 +16,11 @@ CMakeFiles/engine.dir/src/FrameBuffer.cpp.o: ../src/Texture.h
 CMakeFiles/engine.dir/src/FrameBufferController.cpp.o: ../src/FrameBuffer.h
 CMakeFiles/engine.dir/src/FrameBufferController.cpp.o: ../src/FrameBufferController.cpp
 CMakeFiles/engine.dir/src/FrameBufferController.cpp.o: ../src/FrameBufferController.h
+CMakeFiles/engine.dir/src/FrameBufferController.cpp.o: ../src/Mesh.h
+CMakeFiles/engine.dir/src/FrameBufferController.cpp.o: ../src/Model.h
+CMakeFiles/engine.dir/src/FrameBufferController.cpp.o: ../src/Rotation.h
+CMakeFiles/engine.dir/src/FrameBufferController.cpp.o: ../src/Shader.h
+CMakeFiles/engine.dir/src/FrameBufferController.cpp.o: ../src/ShaderController.h
 CMakeFiles/engine.dir/src/FrameBufferController.cpp.o: ../src/Texture.h
 CMakeFiles/engine.dir/src/FrameBufferController.cpp.o: ../src/TextureController.h
 
@@ -56,6 +61,8 @@ CMakeFiles/engine.dir/src/Model.cpp.o: ../src/Rotation.h
 CMakeFiles/engine.dir/src/Model.cpp.o: ../src/Shader.h
 CMakeFiles/engine.dir/src/Model.cpp.o: ../src/Texture.h
 
+CMakeFiles/engine.dir/src/ModelController.cpp.o: ../src/FrameBuffer.h
+CMakeFiles/engine.dir/src/ModelController.cpp.o: ../src/FrameBufferController.h
 CMakeFiles/engine.dir/src/ModelController.cpp.o: ../src/Mesh.h
 CMakeFiles/engine.dir/src/ModelController.cpp.o: ../src/MeshController.h
 CMakeFiles/engine.dir/src/ModelController.cpp.o: ../src/Model.h

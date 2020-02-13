@@ -16,6 +16,7 @@
 #include "MeshController.h"
 #include "ShaderController.h"
 #include "TextureController.h"
+#include "FrameBufferController.h"
 
 #define BUFFER_OFFSET(offset) ((char*)NULL + (offset))
 
@@ -26,5 +27,6 @@ class ModelController
 public:
 	static void load(Model* model);
 	static void render(Model* model, mat4 &projection, mat4 &modelview);
+	static void render(Model* model, GLuint textureId, mat4 &projection, mat4 &modelview);
 };
 

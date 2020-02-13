@@ -49,8 +49,8 @@ int WindowController::createWindow(Window* window) {
 
 	window->setGlContext(&contextGL);
 	
+	
 	GLenum initGlew = glewInit();
-
 	if (initGlew != GLEW_OK) {
 		std::cout << "Erreur d'initialisation de GLEW : " << glewGetErrorString(initGlew) << std::endl;
 		SDL_GL_DeleteContext(window->getGlContext());

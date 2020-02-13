@@ -56,3 +56,40 @@ GLuint FrameBufferController::createBufferRender(GLuint &id, float width, float 
 
     return id;
 }
+
+void FrameBufferController::render(FrameBuffer* frameBuffer, Model* model, glm::mat4 &projection, glm::mat4 &modelview) {
+    
+    glBindFramebuffer(GL_FRAMEBUFFER, frameBuffer->getId());
+        glm::mat4 modelviewSave = modelview;
+
+        Shader* shader = model->getShader();
+
+        modelview = glm::translate(modelview, model->getPosition());
+	    modelview = glm::rotate(modelview, model->getRotation()->getAngle(), model->getRotation()->getAxis());
+
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+        glViewport(0, 0, frameBuffer->getWidth(), frameBuffer->getHeight());
+
+        glUseProgram(shader->getProgramId());
+
+        glBindVertexArray(model->getVaoId());
+
+            mat4 modelviewProjection = projection * modelview;
+
+            ShaderController::loadMatrix4f(shader, "modelviewProjection", modelviewProjection);
+            //glUniformMatrix4fv(glGetUniformLocation(shader->getProgramId(), "modelviewProjection"), 1, GL_FALSE, value_ptr(modelviewProjection));
+            //glUniformMatrix4fv(glGetUniformLocation(model->getShader()->getProgramId(), "projection"), 1, GL_FALSE, value_ptr(projection));
+            //glUniformMatrix4fv(glGetUniformLocation(model->getShader()->getProgramId(), "modelview"), 1, GL_FALSE, value_ptr(modelview));
+
+            glBindTexture(GL_TEXTURE_2D, model->getTexture()->getId());
+            glDrawArrays(GL_TRIANGLES, 0, model->getMesh()->getVertices().size());
+            glBindTexture(GL_TEXTURE_2D, 0);
+
+        glBindVertexArray(0);
+        
+        glUseProgram(0);
+
+    modelview = modelviewSave;
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+}

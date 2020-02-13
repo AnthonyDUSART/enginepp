@@ -7,6 +7,7 @@ Texture::Texture(Texture const& texture) {
 Texture::Texture(std::string file) {
 	m_id = 0;
 	m_file = file;
+	m_isEmpty = false;
 }
 
 Texture::Texture(int height, int width, GLenum format, GLenum internalFormat, bool isEmpty, std::string file, GLuint id) {
